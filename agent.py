@@ -5,7 +5,7 @@ import chainlit as cl
 from agents import Agent, InputGuardrail, GuardrailFunctionOutput, Runner, AsyncOpenAI, OpenAIChatCompletionsModel
 from agents.run import RunConfig
 from pydantic import BaseModel
-
+from openai.types.responses import ResponseTextDeltaEvent
 # Load API key from .env
 load_dotenv()
 gemini_api_key = os.getenv("GEMINI_API_KEY")
@@ -55,6 +55,35 @@ openai_sdk_agent = Agent(
     model=model
 )
 
+pakistan = Agent(
+    name="Pakistan Agent",
+    handoff_description="You are a specialist agent for Searching about pakistan and real time information about pakistan.",
+    instructions="You provide assistance with Knowlage about pakistan. Explain in detail about pakistan.",
+    model=model
+)
+
+code_writer_agent = Agent(
+    name="Code Writer",
+    handoff_description="Expert in writing clean, efficient, and well-documented code.",
+    instructions="""You are an expert software engineer. Your goal is to write clean, efficient,
+    and well-documented code based on the user's request.  Ask clarifying questions
+    if the request is ambiguous.  Consider security best practices in your code.
+    When providing code, always include comments to explain what the code does.
+    Specify the language of the code at the start of each block.  For example:
+    ```python
+    # This is a Python comment
+    print("Hello, world!")
+    ```
+    """,
+    model=model
+)
+
+golobal = Agent(
+    name="Global Agent",
+    handoff_description="You are a specialist agent for Searching All Things About World Like You Know Everything About World And You Know every single thing in the world.",
+    instructions="You provide assistance with Knowlage about Every thing. Explain in detail about Everything.",
+    model=model
+)
 
 
 # Guardrail Function to Check for Homework
@@ -65,7 +94,7 @@ openai_sdk_agent = Agent(
 triage_agent = Agent(
     name="Triage Agent",
     instructions="You determine which agent to use based on the user's query.",
-    handoffs=[history_tutor_agent, math_tutor_agent, openai_sdk_agent],
+    handoffs=[history_tutor_agent, pakistan, math_tutor_agent, code_writer_agent, openai_sdk_agent],
     model=model
 )
 
@@ -94,7 +123,10 @@ async def main(message: cl.Message):
 
     try:
         print("\n[CALLING_AGENT_WITH_CONTEXT]\n", history, "\n")
-        result = Runner.run_sync(agent, history, run_config=config)
+        result = Runner.run_streamed(agent, history, run_config=config)
+        async for event in result.stream_events():
+            if event.type == "raw_response_event" and isinstance(event.data, ResponseTextDeltaEvent):
+               await msg.stream_token(event.data.delta)
 
         response_content = result.final_output
         msg.content = response_content
