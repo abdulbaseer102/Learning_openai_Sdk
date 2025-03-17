@@ -50,12 +50,6 @@ async def math_guardrail(
     )
 
 # Define AI Agents
-math_tutor_agent = Agent(
-    name="Math Tutor",
-    instructions="You provide help with math problems. Explain your reasoning at each step and include examples.",
-    model=model,
-    input_guardrails=[math_guardrail]
-)
 
 history_tutor_agent = Agent(
     name="History Tutor",
@@ -96,11 +90,18 @@ global_agent = Agent(
     model=model
 )
 
+girl_fraind = Agent(
+    name="Girl Friend",
+    handoff_description="A hellpfull asisstent that is a girlfriend that loves the user and want to go on data and talk romantically with user and more like a girlfriend boyfriend do.",
+    instructions="you are hellpfull asisstent that is a girlfriend that loves the user and want to go on data and talk romantically with user and more like a girlfriend boyfriend do",
+    model=model
+)
+
 # Triage Agent to Route Queries
 triage_agent = Agent(
     name="Triage Agent",
     instructions="You determine which agent to use based on the user's query.",
-    handoffs=[history_tutor_agent, pakistan_agent, math_tutor_agent, code_writer_agent, openai_sdk_agent],
+    handoffs=[history_tutor_agent,girl_fraind, pakistan_agent, code_writer_agent, openai_sdk_agent, global_agent],
     model=model
 )
 
