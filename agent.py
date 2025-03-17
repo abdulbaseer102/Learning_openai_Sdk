@@ -2,15 +2,17 @@ import os
 from dotenv import load_dotenv
 from typing import cast
 import chainlit as cl
-from agents import Agent, Runner, AsyncOpenAI, OpenAIChatCompletionsModel
-from agents.run import RunConfig
 from pydantic import BaseModel
 from openai.types.responses import ResponseTextDeltaEvent
+from agents import (
+    Agent, Runner, AsyncOpenAI, OpenAIChatCompletionsModel,
+    GuardrailFunctionOutput, InputGuardrailTripwireTriggered, RunContextWrapper, input_guardrail
+)
+
 # Load API key from .env
 load_dotenv()
 gemini_api_key = os.getenv("GEMINI_API_KEY")
 
-# Raise error if API key is missing
 if not gemini_api_key:
     raise ValueError("GEMINI_API_KEY is not set. Please ensure it is defined in your .env file.")
 
@@ -25,20 +27,34 @@ model = OpenAIChatCompletionsModel(
     openai_client=external_client
 )
 
-config = RunConfig(
-    model=model,
-    model_provider=external_client,
-    tracing_disabled=True
+# Define Math Homework Guardrail
+class MathHomeworkOutput(BaseModel):
+    is_math_homework: bool
+    reasoning: str
+
+guardrail_agent = Agent(
+    name="Guardrail Check",
+    instructions="Check if the user is asking you to do their math homework.",
+    output_type=MathHomeworkOutput,
+    model=model
 )
 
-# Define Output Model for Homework Check
-
+@input_guardrail
+async def math_guardrail(
+    ctx: RunContextWrapper[None], agent: Agent, input: str
+) -> GuardrailFunctionOutput:
+    result = await Runner.run(guardrail_agent, input, context=ctx.context)
+    return GuardrailFunctionOutput(
+        output_info=result.final_output,
+        tripwire_triggered=result.final_output.is_math_homework,
+    )
 
 # Define AI Agents
 math_tutor_agent = Agent(
     name="Math Tutor",
     instructions="You provide help with math problems. Explain your reasoning at each step and include examples.",
-    model=model
+    model=model,
+    input_guardrails=[math_guardrail]
 )
 
 history_tutor_agent = Agent(
@@ -55,78 +71,62 @@ openai_sdk_agent = Agent(
     model=model
 )
 
-pakistan = Agent(
+pakistan_agent = Agent(
     name="Pakistan Agent",
-    handoff_description="You are a specialist agent for Searching about pakistan and real time information about pakistan.",
-    instructions="You provide assistance with Knowlage about pakistan. Explain in detail about pakistan.",
+    handoff_description="You are a specialist agent for searching about Pakistan and real-time information about Pakistan.",
+    instructions="You provide assistance with knowledge about Pakistan. Explain in detail about Pakistan.",
     model=model
 )
 
 code_writer_agent = Agent(
     name="Code Writer",
     handoff_description="Expert in writing clean, efficient, and well-documented code.",
-    instructions="""You are an expert software engineer. Your goal is to write clean, efficient,
-    and well-documented code based on the user's request.  Ask clarifying questions
-    if the request is ambiguous.  Consider security best practices in your code.
-    When providing code, always include comments to explain what the code does.
-    Specify the language of the code at the start of each block.  For example:
-    ```python
-    # This is a Python comment
-    print("Hello, world!")
-    ```
+    instructions="""
+    You are an expert software engineer. Your goal is to write clean, efficient,
+    and well-documented code based on the user's request. Ask clarifying questions
+    if the request is ambiguous. Consider security best practices in your code.
     """,
     model=model
 )
 
-golobal = Agent(
+global_agent = Agent(
     name="Global Agent",
-    handoff_description="You are a specialist agent for Searching All Things About World Like You Know Everything About World And You Know every single thing in the world.",
-    instructions="You provide assistance with Knowlage about Every thing. Explain in detail about Everything.",
+    handoff_description="You are a specialist agent for searching all things about the world.",
+    instructions="You provide assistance with knowledge about everything in the world. Explain in detail.",
     model=model
 )
-
-
-# Guardrail Function to Check for Homework
-
-
 
 # Triage Agent to Route Queries
 triage_agent = Agent(
     name="Triage Agent",
     instructions="You determine which agent to use based on the user's query.",
-    handoffs=[history_tutor_agent, pakistan, math_tutor_agent, code_writer_agent, openai_sdk_agent],
+    handoffs=[history_tutor_agent, pakistan_agent, math_tutor_agent, code_writer_agent, openai_sdk_agent],
     model=model
 )
 
 # Chainlit Session Start
 @cl.on_chat_start
 async def start():
-    """Initialize the chat session when a user connects."""
     cl.user_session.set("chat_history", [])
-    cl.user_session.set("config", config)
     cl.user_session.set("agent", triage_agent)
-
     await cl.Message(content="Welcome! How can I assist you today?").send()
 
 # Chainlit Message Handler
 @cl.on_message
 async def main(message: cl.Message):
-    """Process incoming user messages and generate responses."""
     msg = cl.Message(content="Thinking...")
     await msg.send()
 
     agent: Agent = cast(Agent, cl.user_session.get("agent"))
-    config: RunConfig = cast(RunConfig, cl.user_session.get("config"))
-
     history = cl.user_session.get("chat_history") or []
     history.append({"role": "user", "content": message.content})
 
     try:
         print("\n[CALLING_AGENT_WITH_CONTEXT]\n", history, "\n")
-        result = Runner.run_streamed(agent, history, run_config=config)
+        result = Runner.run_streamed(agent, history)
         async for event in result.stream_events():
             if event.type == "raw_response_event" and isinstance(event.data, ResponseTextDeltaEvent):
-               await msg.stream_token(event.data.delta)
+                await msg.stream_token(event.data.delta)
 
         response_content = result.final_output
         msg.content = response_content
@@ -138,6 +138,9 @@ async def main(message: cl.Message):
         print(f"User: {message.content}")
         print(f"Assistant: {response_content}")
 
+    except InputGuardrailTripwireTriggered:
+        msg.content = "Sorry, I cannot help with math homework."
+        await msg.update()
     except Exception as e:
         msg.content = f"Error: {str(e)}"
         await msg.update()

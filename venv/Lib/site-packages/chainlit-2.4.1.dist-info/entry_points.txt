@@ -1,3 +1,0 @@
-[console_scripts]
-chainlit=chainlit.cli:cli
-
