@@ -1,0 +1,214 @@
+{
+  "common": {
+    "actions": {
+      "cancel": "বাতিল করুন",
+      "confirm": "নিশ্চিত করুন",
+      "continue": "চালিয়ে যান",
+      "goBack": "পিছনে যান",
+      "reset": "রিসেট করুন",
+      "submit": "জমা দিন"
+    },
+    "status": {
+      "loading": "লোড হচ্ছে...",
+      "error": {
+        "default": "একটি ত্রুটি ঘটেছে",
+        "serverConnection": "সার্ভারের সাথে সংযোগ করা যাচ্ছে না"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "অ্যাপ্লিকেশন ব্যবহার করতে লগইন করুন",
+      "form": {
+        "email": {
+          "label": "ইমেইল ঠিকানা",
+          "required": "ইমেইল একটি আবশ্যক ক্ষেত্র"
+        },
+        "password": {
+          "label": "পাসওয়ার্ড",
+          "required": "পাসওয়ার্ড একটি আবশ্যক ক্ষেত্র"
+        },
+        "actions": {
+          "signin": "সাইন ইন করুন"
+        },
+        "alternativeText": {
+          "or": "অথবা"
+        }
+      },
+      "errors": {
+        "default": "সাইন ইন করা সম্ভব হচ্ছে না",
+        "signin": "অন্য একটি অ্যাকাউন্ট দিয়ে সাইন ইন করার চেষ্টা করুন",
+        "oauthSignin": "অন্য একটি অ্যাকাউন্ট দিয়ে সাইন ইন করার চেষ্টা করুন",
+        "redirectUriMismatch": "রিডাইরেক্ট URI ওআথ অ্যাপ কনফিগারেশনের সাথে মিলছে না",
+        "oauthCallback": "অন্য একটি অ্যাকাউন্ট দিয়ে সাইন ইন করার চেষ্টা করুন",
+        "oauthCreateAccount": "অন্য একটি অ্যাকাউন্ট দিয়ে সাইন ইন করার চেষ্টা করুন",
+        "emailCreateAccount": "অন্য একটি অ্যাকাউন্ট দিয়ে সাইন ইন করার চেষ্টা করুন",
+        "callback": "অন্য একটি অ্যাকাউন্ট দিয়ে সাইন ইন করার চেষ্টা করুন",
+        "oauthAccountNotLinked": "আপনার পরিচয় নিশ্চিত করতে, আপনি যে অ্যাকাউন্টটি মূলত ব্যবহার করেছিলেন সেটি দিয়ে সাইন ইন করুন",
+        "emailSignin": "ইমেইল পাঠানো যায়নি",
+        "emailVerify": "অনুগ্রহ করে আপনার ইমেইল যাচাই করুন, একটি নতুন ইমেইল পাঠানো হয়েছে",
+        "credentialsSignin": "সাইন ইন ব্যর্থ হয়েছে। আপনার দেওয়া তথ্য সঠিক কিনা যাচাই করুন",
+        "sessionRequired": "এই পৃষ্ঠা দেখতে অনুগ্রহ করে সাইন ইন করুন"
+      }
+    },
+    "provider": {
+      "continue": "{{provider}} দিয়ে চালিয়ে যান"
+    }
+  },
+  "chat": {
+    "input": {
+      "placeholder": "আপনার বার্তা এখানে টাইপ করুন...",
+      "actions": {
+        "send": "বার্তা পাঠান",
+        "stop": "কাজ বন্ধ করুন",
+        "attachFiles": "ফাইল সংযুক্ত করুন"
+      }
+    },
+    "speech": {
+      "start": "রেকর্ডিং শুরু করুন",
+      "stop": "রেকর্ডিং বন্ধ করুন",
+      "connecting": "সংযোগ করা হচ্ছে"
+    },
+    "fileUpload": {
+      "dragDrop": "এখানে ফাইল টেনে আনুন",
+      "browse": "ফাইল ব্রাউজ করুন",
+      "sizeLimit": "সীমা:",
+      "errors": {
+        "failed": "আপলোড ব্যর্থ হয়েছে",
+        "cancelled": "আপলোড বাতিল করা হয়েছে"
+      }
+    },
+    "messages": {
+      "status": {
+        "using": "ব্যবহার করছে",
+        "used": "ব্যবহৃত"
+      },
+      "actions": {
+        "copy": {
+          "button": "ক্লিপবোর্ডে কপি করুন",
+          "success": "কপি করা হয়েছে!"
+        }
+      },
+      "feedback": {
+        "positive": "সহায়ক",
+        "negative": "সহায়ক নয়",
+        "edit": "প্রতিক্রিয়া সম্পাদনা করুন",
+        "dialog": {
+          "title": "মন্তব্য যোগ করুন",
+          "submit": "প্রতিক্রিয়া জমা দিন"
+        },
+        "status": {
+          "updating": "হালনাগাদ করা হচ্ছে",
+          "updated": "প্রতিক্রিয়া হালনাগাদ করা হয়েছে"
+        }
+      }
+    },
+    "history": {
+      "title": "সর্বশেষ ইনপুট",
+      "empty": "কোনো তথ্য নেই...",
+      "show": "ইতিহাস দেখুন"
+    },
+    "settings": {
+      "title": "সেটিংস প্যানেল"
+    },
+    "watermark": "দ্বারা নির্মিত"
+  },
+  "threadHistory": {
+    "sidebar": {
+      "title": "পূর্ববর্তী চ্যাট",
+      "filters": {
+        "search": "অনুসন্ধান",
+        "placeholder": "Search conversations..."
+      },
+      "timeframes": {
+        "today": "আজ",
+        "yesterday": "গতকাল",
+        "previous7days": "গত ৭ দিন",
+        "previous30days": "গত ৩০ দিন"
+      },
+      "empty": "কোনো থ্রেড পাওয়া যায়নি",
+      "actions": {
+        "close": "সাইডবার বন্ধ করুন",
+        "open": "সাইডবার খুলুন"
+      }
+    },
+    "thread": {
+      "untitled": "শিরোনামহীন আলোচনা",
+      "menu": {
+          "rename": "Rename",
+          "delete": "Delete"
+        },
+      "actions": {
+        "delete": {
+          "title": "মুছে ফেলা নিশ্চিত করুন",
+          "description": "এটি থ্রেড এবং এর বার্তা ও উপাদানগুলি মুছে ফেলবে। এই কাজটি পূর্বাবস্থায় ফেরানো যাবে না",
+          "success": "চ্যাট মুছে ফেলা হয়েছে",
+          "inProgress": "চ্যাট মুছে ফেলা হচ্ছে"
+        },
+        "rename": {
+          "title": "থ্রেডের নাম পরিবর্তন করুন",
+          "description": "এই থ্রেডের জন্য একটি নতুন নাম দিন",
+          "form": {
+            "name": {
+              "label": "নাম",
+              "placeholder": "নতুন নাম লিখুন"
+            }
+          },
+          "success": "থ্রেডের নাম পরিবর্তন করা হয়েছে!",
+          "inProgress": "থ্রেডের নাম পরিবর্তন করা হচ্ছে"
+        }
+      }
+    }
+  },
+  "navigation": {
+    "header": {
+      "chat": "চ্যাট",
+      "readme": "রিডমি",
+      "theme": {
+        "light": "Light Theme",
+        "dark": "Dark Theme",
+        "system": "Follow System"
+      }
+    },
+    "newChat": {
+      "button": "নতুন চ্যাট",
+      "dialog": {
+        "title": "নতুন চ্যাট তৈরি করুন",
+        "description": "এটি আপনার বর্তমান চ্যাট ইতিহাস মুছে ফেলবে। আপনি কি চালিয়ে যেতে চান?",
+        "tooltip": "নতুন চ্যাট"
+      }
+    },
+    "user": {
+      "menu": {
+        "settings": "সেটিংস",
+        "settingsKey": "S",
+        "apiKeys": "এপিআই কী",
+        "logout": "লগআউট"
+      }
+    }
+  },
+  "apiKeys": {
+    "title": "প্রয়োজনীয় এপিআই কী",
+    "description": "এই অ্যাপ্লিকেশন ব্যবহার করতে নিম্নলিখিত এপিআই কী প্রয়োজন। কীগুলি আপনার ডিভাইসের লোকাল স্টোরেজে সংরক্ষিত থাকে।",
+    "success": {
+      "saved": "সফলভাবে সংরক্ষিত হয়েছে"
+    }
+  },
+  "alerts": {
+    "info": "Info",
+    "note": "Note",
+    "tip": "Tip",
+    "important": "Important",
+    "warning": "Warning",
+    "caution": "Caution",
+    "debug": "Debug",
+    "example": "Example",
+    "success": "Success",
+    "help": "Help",
+    "idea": "Idea",
+    "pending": "Pending",
+    "security": "Security",
+    "beta": "Beta",
+    "best-practice": "Best Practice"
+  }
+}

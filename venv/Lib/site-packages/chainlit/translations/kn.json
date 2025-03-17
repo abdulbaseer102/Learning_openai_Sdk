@@ -1,0 +1,214 @@
+{
+  "common": {
+    "actions": {
+      "cancel": "ರದ್ದುಮಾಡಿ",
+      "confirm": "ದೃಢೀಕರಿಸಿ",
+      "continue": "ಮುಂದುವರಿಸಿ",
+      "goBack": "ಹಿಂದೆ ಹೋಗಿ",
+      "reset": "ಮರುಹೊಂದಿಸಿ",
+      "submit": "ಸಲ್ಲಿಸಿ"
+    },
+    "status": {
+      "loading": "ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
+      "error": {
+        "default": "ದೋಷ ಸಂಭವಿಸಿದೆ",
+        "serverConnection": "ಸರ್ವರ್‌ ಅನ್ನು ತಲುಪಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "ಅಪ್ಲಿಕೇಶನ್‌ಗೆ ಪ್ರವೇಶಿಸಲು ಲಾಗಿನ್ ಮಾಡಿ",
+      "form": {
+        "email": {
+          "label": "ಇಮೇಲ್ ವಿಳಾಸ",
+          "required": "ಇಮೇಲ್ ಅಗತ್ಯವಿರುವ ಕ್ಷೇತ್ರ"
+        },
+        "password": {
+          "label": "ಪಾಸ್‌ವರ್ಡ್",
+          "required": "ಪಾಸ್‌ವರ್ಡ್ ಅಗತ್ಯವಿರುವ ಕ್ಷೇತ್ರ"
+        },
+        "actions": {
+          "signin": "ಸೈನ್ ಇನ್ ಮಾಡಿ"
+        },
+        "alternativeText": {
+          "or": "ಅಥವಾ"
+        }
+      },
+      "errors": {
+        "default": "ಸೈನ್ ಇನ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ",
+        "signin": "ಬೇರೆ ಖಾತೆಯೊಂದಿಗೆ ಸೈನ್ ಇನ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿ",
+        "oauthSignin": "ಬೇರೆ ಖಾತೆಯೊಂದಿಗೆ ಸೈನ್ ಇನ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿ",
+        "redirectUriMismatch": "ರೀಡೈರೆಕ್ಟ್ URI ಓಥ್ ಅಪ್ಲಿಕೇಶನ್ ಕಾನ್ಫಿಗರೇಶನ್‌ಗೆ ಹೊಂದಿಕೆಯಾಗುತ್ತಿಲ್ಲ",
+        "oauthCallback": "ಬೇರೆ ಖಾತೆಯೊಂದಿಗೆ ಸೈನ್ ಇನ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿ",
+        "oauthCreateAccount": "ಬೇರೆ ಖಾತೆಯೊಂದಿಗೆ ಸೈನ್ ಇನ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿ",
+        "emailCreateAccount": "ಬೇರೆ ಖಾತೆಯೊಂದಿಗೆ ಸೈನ್ ಇನ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿ",
+        "callback": "ಬೇರೆ ಖಾತೆಯೊಂದಿಗೆ ಸೈನ್ ಇನ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿ",
+        "oauthAccountNotLinked": "ನಿಮ್ಮ ಗುರುತನ್ನು ದೃಢೀಕರಿಸಲು, ನೀವು ಮೊದಲು ಬಳಸಿದ ಅದೇ ಖಾತೆಯೊಂದಿಗೆ ಸೈನ್ ಇನ್ ಮಾಡಿ",
+        "emailSignin": "ಇಮೇಲ್ ಕಳುಹಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ",
+        "emailVerify": "ದಯವಿಟ್ಟು ನಿಮ್ಮ ಇಮೇಲ್ ಪರಿಶೀಲಿಸಿ, ಹೊಸ ಇಮೇಲ್ ಕಳುಹಿಸಲಾಗಿದೆ",
+        "credentialsSignin": "ಸೈನ್ ಇನ್ ವಿಫಲವಾಗಿದೆ. ನೀವು ಒದಗಿಸಿದ ವಿವರಗಳು ಸರಿಯಾಗಿವೆಯೇ ಎಂದು ಪರಿಶೀಲಿಸಿ",
+        "sessionRequired": "ಈ ಪುಟವನ್ನು ಪ್ರವೇಶಿಸಲು ದಯವಿಟ್ಟು ಸೈನ್ ಇನ್ ಮಾಡಿ"
+      }
+    },
+    "provider": {
+      "continue": "{{provider}} ನೊಂದಿಗೆ ಮುಂದುವರಿಸಿ"
+    }
+  },
+  "chat": {
+    "input": {
+      "placeholder": "ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಇಲ್ಲಿ ಟೈಪ್ ಮಾಡಿ...",
+      "actions": {
+        "send": "ಸಂದೇಶ ಕಳುಹಿಸಿ",
+        "stop": "ಕಾರ್ಯ ನಿಲ್ಲಿಸಿ",
+        "attachFiles": "ಫೈಲ್‌ಗಳನ್ನು ಲಗತ್ತಿಸಿ"
+      }
+    },
+    "speech": {
+      "start": "ರೆಕಾರ್ಡಿಂಗ್ ಪ್ರಾರಂಭಿಸಿ",
+      "stop": "ರೆಕಾರ್ಡಿಂಗ್ ನಿಲ್ಲಿಸಿ",
+      "connecting": "ಸಂಪರ್ಕಿಸಲಾಗುತ್ತಿದೆ"
+    },
+    "fileUpload": {
+      "dragDrop": "ಫೈಲ್‌ಗಳನ್ನು ಇಲ್ಲಿ ಎಳೆದು ಬಿಡಿ",
+      "browse": "ಫೈಲ್‌ಗಳನ್ನು ಬ್ರೌಸ್ ಮಾಡಿ",
+      "sizeLimit": "ಮಿತಿ:",
+      "errors": {
+        "failed": "ಅಪ್‌ಲೋಡ್ ವಿಫಲವಾಗಿದೆ",
+        "cancelled": "ಅಪ್‌ಲೋಡ್ ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ"
+      }
+    },
+    "messages": {
+      "status": {
+        "using": "ಬಳಸುತ್ತಿರುವುದು",
+        "used": "ಬಳಸಲಾಗಿದೆ"
+      },
+      "actions": {
+        "copy": {
+          "button": "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಿ",
+          "success": "ನಕಲಿಸಲಾಗಿದೆ!"
+        }
+      },
+      "feedback": {
+        "positive": "ಸಹಾಯಕವಾಗಿದೆ",
+        "negative": "ಸಹಾಯಕವಾಗಿಲ್ಲ",
+        "edit": "ಪ್ರತಿಕ್ರಿಯೆ ಸಂಪಾದಿಸಿ",
+        "dialog": {
+          "title": "ಕಾಮೆಂಟ್ ಸೇರಿಸಿ",
+          "submit": "ಪ್ರತಿಕ್ರಿಯೆ ಸಲ್ಲಿಸಿ"
+        },
+        "status": {
+          "updating": "ನವೀಕರಿಸಲಾಗುತ್ತಿದೆ",
+          "updated": "ಪ್ರತಿಕ್ರಿಯೆ ನವೀಕರಿಸಲಾಗಿದೆ"
+        }
+      }
+    },
+    "history": {
+      "title": "ಕೊನೆಯ ಇನ್‌ಪುಟ್‌ಗಳು",
+      "empty": "ಖಾಲಿಯಾಗಿದೆ...",
+      "show": "ಇತಿಹಾಸ ತೋರಿಸಿ"
+    },
+    "settings": {
+      "title": "ಸೆಟ್ಟಿಂಗ್‌ಗಳ ಪ್ಯಾನೆಲ್"
+    },
+    "watermark": "ಇದರೊಂದಿಗೆ ನಿರ್ಮಿಸಲಾಗಿದೆ"
+  },
+  "threadHistory": {
+    "sidebar": {
+      "title": "ಹಿಂದಿನ ಸಂಭಾಷಣೆಗಳು",
+      "filters": {
+        "search": "ಹುಡುಕಿ",
+        "placeholder": "Search conversations..."
+      },
+      "timeframes": {
+        "today": "ಇಂದು",
+        "yesterday": "ನಿನ್ನೆ",
+        "previous7days": "ಹಿಂದಿನ 7 ದಿನಗಳು",
+        "previous30days": "ಹಿಂದಿನ 30 ದಿನಗಳು"
+      },
+      "empty": "ಯಾವುದೇ ಸಂಭಾಷಣೆಗಳು ಕಂಡುಬಂದಿಲ್ಲ",
+      "actions": {
+        "close": "ಪಕ್ಕದ ಪಟ್ಟಿ ಮುಚ್ಚಿ",
+        "open": "ಪಕ್ಕದ ಪಟ್ಟಿ ತೆರೆಯಿರಿ"
+      }
+    },
+    "thread": {
+      "untitled": "ಶೀರ್ಷಿಕೆರಹಿತ ಸಂಭಾಷಣೆ",
+      "menu": {
+          "rename": "Rename",
+          "delete": "Delete"
+        },
+      "actions": {
+        "delete": {
+          "title": "ಅಳಿಸುವಿಕೆಯನ್ನು ದೃಢೀಕರಿಸಿ",
+          "description": "ಇದು ಸಂಭಾಷಣೆಯನ್ನು ಹಾಗೂ ಅದರ ಸಂದೇಶಗಳು ಮತ್ತು ಅಂಶಗಳನ್ನು ಅಳಿಸುತ್ತದೆ. ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
+          "success": "ಸಂಭಾಷಣೆ ಅಳಿಸಲಾಗಿದೆ",
+          "inProgress": "ಸಂಭಾಷಣೆ ಅಳಿಸಲಾಗುತ್ತಿದೆ"
+        },
+        "rename": {
+          "title": "ಸಂಭಾಷಣೆಯ ಹೆಸರು ಬದಲಾಯಿಸಿ",
+          "description": "ಈ ಸಂಭಾಷಣೆಗೆ ಹೊಸ ಹೆಸರನ್ನು ನಮೂದಿಸಿ",
+          "form": {
+            "name": {
+              "label": "ಹೆಸರು",
+              "placeholder": "ಹೊಸ ಹೆಸರನ್ನು ನಮೂದಿಸಿ"
+            }
+          },
+          "success": "ಸಂಭಾಷಣೆಯ ಹೆಸರು ಬದಲಾಯಿಸಲಾಗಿದೆ!",
+          "inProgress": "ಸಂಭಾಷಣೆಯ ಹೆಸರು ಬದಲಾಯಿಸಲಾಗುತ್ತಿದೆ"
+        }
+      }
+    }
+  },
+  "navigation": {
+    "header": {
+      "chat": "ಸಂಭಾಷಣೆ",
+      "readme": "ಓದಿ",
+      "theme": {
+        "light": "Light Theme",
+        "dark": "Dark Theme",
+        "system": "Follow System"
+      }
+    },
+    "newChat": {
+      "button": "ಹೊಸ ಸಂಭಾಷಣೆ",
+      "dialog": {
+        "title": "ಹೊಸ ಸಂಭಾಷಣೆ ರಚಿಸಿ",
+        "description": "ಇದು ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಸಂಭಾಷಣೆಯ ಇತಿಹಾಸವನ್ನು ಅಳಿಸುತ್ತದೆ. ನೀವು ಮುಂದುವರೆಯಲು ಬಯಸುವಿರಾ?",
+        "tooltip": "ಹೊಸ ಸಂಭಾಷಣೆ"
+      }
+    },
+    "user": {
+      "menu": {
+        "settings": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+        "settingsKey": "S",
+        "apiKeys": "API ಕೀಗಳು",
+        "logout": "ಲಾಗ್ ಔಟ್"
+      }
+    }
+  },
+  "apiKeys": {
+    "title": "ಅಗತ್ಯವಿರುವ API ಕೀಗಳು",
+    "description": "ಈ ಅಪ್ಲಿಕೇಶನ್ ಬಳಸಲು, ಈ ಕೆಳಗಿನ API ಕೀಗಳು ಅಗತ್ಯವಿರುತ್ತವೆ. ಕೀಗಳನ್ನು ನಿಮ್ಮ ಸಾಧನದ ಸ್ಥಳೀಯ ಸಂಗ್ರಹಣೆಯಲ್ಲಿ ಸಂಗ್ರಹಿಸಲಾಗುತ್ತದೆ.",
+    "success": {
+      "saved": "ಯಶಸ್ವಿಯಾಗಿ ಉಳಿಸಲಾಗಿದೆ"
+    }
+  },
+  "alerts": {
+    "info": "Info",
+    "note": "Note",
+    "tip": "Tip",
+    "important": "Important",
+    "warning": "Warning",
+    "caution": "Caution",
+    "debug": "Debug",
+    "example": "Example",
+    "success": "Success",
+    "help": "Help",
+    "idea": "Idea",
+    "pending": "Pending",
+    "security": "Security",
+    "beta": "Beta",
+    "best-practice": "Best Practice"
+  }
+}

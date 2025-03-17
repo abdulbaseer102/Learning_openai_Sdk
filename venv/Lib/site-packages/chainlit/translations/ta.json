@@ -1,0 +1,214 @@
+{
+  "common": {
+    "actions": {
+      "cancel": "ரத்து செய்",
+      "confirm": "உறுதிப்படுத்து",
+      "continue": "தொடர்க",
+      "goBack": "திரும்பிச் செல்",
+      "reset": "மீட்டமை",
+      "submit": "சமர்ப்பி"
+    },
+    "status": {
+      "loading": "ஏற்றுகிறது...",
+      "error": {
+        "default": "பிழை ஏற்பட்டது",
+        "serverConnection": "சேவையகத்தை அடைய முடியவில்லை"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "பயன்பாட்டை அணுக உள்நுழையவும்",
+      "form": {
+        "email": {
+          "label": "மின்னஞ்சல் முகவரி",
+          "required": "மின்னஞ்சல் தேவையான புலம்"
+        },
+        "password": {
+          "label": "கடவுச்சொல்",
+          "required": "கடவுச்சொல் தேவையான புலம்"
+        },
+        "actions": {
+          "signin": "உள்நுழைக"
+        },
+        "alternativeText": {
+          "or": "அல்லது"
+        }
+      },
+      "errors": {
+        "default": "உள்நுழைய முடியவில்லை",
+        "signin": "வேறு கணக்குடன் உள்நுழைய முயற்சிக்கவும்",
+        "oauthSignin": "வேறு கணக்குடன் உள்நுழைய முயற்சிக்கவும்",
+        "redirectUriMismatch": "திசைதிருப்பல் URI ஓஆத் பயன்பாட்டு கட்டமைப்புடன் பொருந்தவில்லை",
+        "oauthCallback": "வேறு கணக்குடன் உள்நுழைய முயற்சிக்கவும்",
+        "oauthCreateAccount": "வேறு கணக்குடன் உள்நுழைய முயற்சிக்கவும்",
+        "emailCreateAccount": "வேறு கணக்குடன் உள்நுழைய முயற்சிக்கவும்",
+        "callback": "வேறு கணக்குடன் உள்நுழைய முயற்சிக்கவும்",
+        "oauthAccountNotLinked": "உங்கள் அடையாளத்தை உறுதிப்படுத்த, முதலில் பயன்படுத்திய அதே கணக்குடன் உள்நுழையவும்",
+        "emailSignin": "மின்னஞ்சலை அனுப்ப முடியவில்லை",
+        "emailVerify": "உங்கள் மின்னஞ்சலை சரிபார்க்கவும், புதிய மின்னஞ்சல் அனுப்பப்பட்டுள்ளது",
+        "credentialsSignin": "உள்நுழைவு தோல்வியடைந்தது. நீங்கள் வழங்கிய விவரங்கள் சரியானவை என சரிபார்க்கவும்",
+        "sessionRequired": "இந்தப் பக்கத்தை அணுக உள்நுழையவும்"
+      }
+    },
+    "provider": {
+      "continue": "{{provider}} மூலம் தொடரவும்"
+    }
+  },
+  "chat": {
+    "input": {
+      "placeholder": "உங்கள் செய்தியை இங்கே தட்டச்சு செய்யவும்...",
+      "actions": {
+        "send": "செய்தி அனுப்பு",
+        "stop": "பணியை நிறுத்து",
+        "attachFiles": "கோப்புகளை இணை"
+      }
+    },
+    "speech": {
+      "start": "பதிவு தொடங்கு",
+      "stop": "பதிவை நிறுத்து",
+      "connecting": "இணைக்கிறது"
+    },
+    "fileUpload": {
+      "dragDrop": "கோப்புகளை இங்கே இழுத்து விடவும்",
+      "browse": "கோப்புகளை உலாவு",
+      "sizeLimit": "வரம்பு:",
+      "errors": {
+        "failed": "பதிவேற்றம் தோல்வியடைந்தது",
+        "cancelled": "பதிவேற்றம் ரத்து செய்யப்பட்டது"
+      }
+    },
+    "messages": {
+      "status": {
+        "using": "பயன்படுத்துகிறது",
+        "used": "பயன்படுத்தப்பட்டது"
+      },
+      "actions": {
+        "copy": {
+          "button": "கிளிப்போர்டுக்கு நகலெடு",
+          "success": "நகலெடுக்கப்பட்டது!"
+        }
+      },
+      "feedback": {
+        "positive": "பயனுள்ளதாக இருந்தது",
+        "negative": "பயனுள்ளதாக இல்லை",
+        "edit": "கருத்தை திருத்து",
+        "dialog": {
+          "title": "கருத்தைச் சேர்",
+          "submit": "கருத்தை சமர்ப்பி"
+        },
+        "status": {
+          "updating": "புதுப்பிக்கிறது",
+          "updated": "கருத்து புதுப்பிக்கப்பட்டது"
+        }
+      }
+    },
+    "history": {
+      "title": "கடைசி உள்ளீடுகள்",
+      "empty": "காலியாக உள்ளது...",
+      "show": "வரலாற்றைக் காட்டு"
+    },
+    "settings": {
+      "title": "அமைப்புகள் பலகம்"
+    },
+    "watermark": "உடன் உருவாக்கப்பட்டது"
+  },
+  "threadHistory": {
+    "sidebar": {
+      "title": "கடந்த உரையாடல்கள்",
+      "filters": {
+        "search": "தேடு",
+        "placeholder": "Search conversations..."
+      },
+      "timeframes": {
+        "today": "இன்று",
+        "yesterday": "நேற்று",
+        "previous7days": "கடந்த 7 நாட்கள்",
+        "previous30days": "கடந்த 30 நாட்கள்"
+      },
+      "empty": "உரையாடல்கள் எதுவும் இல்லை",
+      "actions": {
+        "close": "பக்கப்பட்டியை மூடு",
+        "open": "பக்கப்பட்டியை திற"
+      }
+    },
+    "thread": {
+      "untitled": "தலைப்பிடாத உரையாடல்",
+      "menu": {
+          "rename": "Rename",
+          "delete": "Delete"
+        },
+      "actions": {
+        "delete": {
+          "title": "நீக்குவதை உறுதிப்படுத்து",
+          "description": "இது உரையாடல் மற்றும் அதன் செய்திகள், உறுப்புகளை நீக்கும். இந்த செயலை மீட்டெடுக்க முடியாது",
+          "success": "உரையாடல் நீக்கப்பட்டது",
+          "inProgress": "உரையாடலை நீக்குகிறது"
+        },
+        "rename": {
+          "title": "உரையாடலை மறுபெயரிடு",
+          "description": "இந்த உரையாடலுக்கு புதிய பெயரை உள்ளிடவும்",
+          "form": {
+            "name": {
+              "label": "பெயர்",
+              "placeholder": "புதிய பெயரை உள்ளிடவும்"
+            }
+          },
+          "success": "உரையாடல் மறுபெயரிடப்பட்டது!",
+          "inProgress": "உரையாடலை மறுபெயரிடுகிறது"
+        }
+      }
+    }
+  },
+  "navigation": {
+    "header": {
+      "chat": "உரையாடல்",
+      "readme": "படிக்கவும்",
+      "theme": {
+        "light": "Light Theme",
+        "dark": "Dark Theme",
+        "system": "Follow System"
+      }
+    },
+    "newChat": {
+      "button": "புதிய உரையாடல்",
+      "dialog": {
+        "title": "புதிய உரையாடலை உருவாக்கு",
+        "description": "இது உங்கள் தற்போதைய உரையாடல் வரலாற்றை அழிக்கும். தொடர விரும்புகிறீர்களா?",
+        "tooltip": "புதிய உரையாடல்"
+      }
+    },
+    "user": {
+      "menu": {
+        "settings": "அமைப்புகள்",
+        "settingsKey": "S",
+        "apiKeys": "API விசைகள்",
+        "logout": "வெளியேறு"
+      }
+    }
+  },
+  "apiKeys": {
+    "title": "தேவையான API விசைகள்",
+    "description": "இந்த பயன்பாட்டைப் பயன்படுத்த, பின்வரும் API விசைகள் தேவை. விசைகள் உங்கள் சாதனத்தின் உள்ளூர் சேமிப்பகத்தில் சேமிக்கப்படும்.",
+    "success": {
+      "saved": "வெற்றிகரமாக சேமிக்கப்பட்டது"
+    }
+  },
+  "alerts": {
+    "info": "Info",
+    "note": "Note",
+    "tip": "Tip",
+    "important": "Important",
+    "warning": "Warning",
+    "caution": "Caution",
+    "debug": "Debug",
+    "example": "Example",
+    "success": "Success",
+    "help": "Help",
+    "idea": "Idea",
+    "pending": "Pending",
+    "security": "Security",
+    "beta": "Beta",
+    "best-practice": "Best Practice"
+  }
+}

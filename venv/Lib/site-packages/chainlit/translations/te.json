@@ -1,0 +1,214 @@
+{
+  "common": {
+    "actions": {
+      "cancel": "రద్దు చేయండి",
+      "confirm": "నిర్ధారించండి",
+      "continue": "కొనసాగించండి",
+      "goBack": "వెనక్కి వెళ్ళండి",
+      "reset": "రీసెట్ చేయండి",
+      "submit": "సమర్పించండి"
+    },
+    "status": {
+      "loading": "లోడ్ అవుతోంది...",
+      "error": {
+        "default": "లోపం సంభవించింది",
+        "serverConnection": "సర్వర్‌ని చేరుకోలేకపోయాము"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "యాప్‌ని ఉపయోగించడానికి లాగిన్ చేయండి",
+      "form": {
+        "email": {
+          "label": "ఇమెయిల్ చిరునామా",
+          "required": "ఇమెయిల్ తప్పనిసరి"
+        },
+        "password": {
+          "label": "పాస్‌వర్డ్",
+          "required": "పాస్‌వర్డ్ తప్పనిసరి"
+        },
+        "actions": {
+          "signin": "సైన్ ఇన్ చేయండి"
+        },
+        "alternativeText": {
+          "or": "లేదా"
+        }
+      },
+      "errors": {
+        "default": "సైన్ ఇన్ చేయలేకపోయాము",
+        "signin": "వేరే ఖాతాతో సైన్ ఇన్ చేయడానికి ప్రయత్నించండి",
+        "oauthSignin": "వేరే ఖాతాతో సైన్ ఇన్ చేయడానికి ప్రయత్నించండి",
+        "redirectUriMismatch": "రీడైరెక్ట్ URI oauth యాప్ కాన్ఫిగరేషన్‌తో సరిపోలడం లేదు",
+        "oauthCallback": "వేరే ఖాతాతో సైన్ ఇన్ చేయడానికి ప్రయత్నించండి",
+        "oauthCreateAccount": "వేరే ఖాతాతో సైన్ ఇన్ చేయడానికి ప్రయత్నించండి",
+        "emailCreateAccount": "వేరే ఖాతాతో సైన్ ఇన్ చేయడానికి ప్రయత్నించండి",
+        "callback": "వేరే ఖాతాతో సైన్ ఇన్ చేయడానికి ప్రయత్నించండి",
+        "oauthAccountNotLinked": "మీ గుర్తింపును నిర్ధారించడానికి, మీరు మొదట ఉపయోగించిన అదే ఖాతాతో సైన్ ఇన్ చేయండి",
+        "emailSignin": "ఇమెయిల్ పంపడం సాధ్యం కాలేదు",
+        "emailVerify": "దయచేసి మీ ఇమెయిల్‌ని ధృవీకరించండి, కొత్త ఇమెయిల్ పంపబడింది",
+        "credentialsSignin": "సైన్ ఇన్ విఫలమైంది. మీరు అందించిన వివరాలు సరైనవేనా అని తనిఖీ చేయండి",
+        "sessionRequired": "ఈ పేజీని యాక్సెస్ చేయడానికి దయచేసి సైన్ ఇన్ చేయండి"
+      }
+    },
+    "provider": {
+      "continue": "{{provider}}తో కొనసాగించండి"
+    }
+  },
+  "chat": {
+    "input": {
+      "placeholder": "మీ సందేశాన్ని ఇక్కడ టైప్ చేయండి...",
+      "actions": {
+        "send": "సందేశం పంపండి",
+        "stop": "పని ఆపండి",
+        "attachFiles": "ఫైల్స్ జోడించండి"
+      }
+    },
+    "speech": {
+      "start": "రికార్డింగ్ ప్రారంభించండి",
+      "stop": "రికార్డింగ్ ఆపండి",
+      "connecting": "అనుసంధానిస్తోంది"
+    },
+    "fileUpload": {
+      "dragDrop": "ఫైల్స్‌ని ఇక్కడ డ్రాగ్ చేసి డ్రాప్ చేయండి",
+      "browse": "ఫైల్స్ బ్రౌజ్ చేయండి",
+      "sizeLimit": "పరిమితి:",
+      "errors": {
+        "failed": "అప్‌లోడ్ విఫలమైంది",
+        "cancelled": "అప్‌లోడ్ రద్దు చేయబడింది"
+      }
+    },
+    "messages": {
+      "status": {
+        "using": "ఉపయోగిస్తోంది",
+        "used": "ఉపయోగించబడింది"
+      },
+      "actions": {
+        "copy": {
+          "button": "క్లిప్‌బోర్డ్‌కి కాపీ చేయండి",
+          "success": "కాపీ చేయబడింది!"
+        }
+      },
+      "feedback": {
+        "positive": "సహాయకరం",
+        "negative": "సహాయకరం కాదు",
+        "edit": "అభిప్రాయాన్ని సవరించండి",
+        "dialog": {
+          "title": "వ్యాఖ్య జోడించండి",
+          "submit": "అభిప్రాయాన్ని సమర్పించండి"
+        },
+        "status": {
+          "updating": "నవీకరిస్తోంది",
+          "updated": "అభిప్రాయం నవీకరించబడింది"
+        }
+      }
+    },
+    "history": {
+      "title": "చివరి ఇన్‌పుట్‌లు",
+      "empty": "ఖాళీగా ఉంది...",
+      "show": "చరిత్రను చూపించు"
+    },
+    "settings": {
+      "title": "సెట్టింగ్‌ల ప్యానెల్"
+    },
+    "watermark": "తో నిర్మించబడింది"
+  },
+  "threadHistory": {
+    "sidebar": {
+      "title": "గత చాట్‌లు",
+      "filters": {
+        "search": "వెతకండి",
+        "placeholder": "Search conversations..."
+      },
+      "timeframes": {
+        "today": "ఈరోజు",
+        "yesterday": "నిన్న",
+        "previous7days": "గత 7 రోజులు",
+        "previous30days": "గత 30 రోజులు"
+      },
+      "empty": "థ్రెడ్‌లు కనుగొనబడలేదు",
+      "actions": {
+        "close": "సైడ్‌బార్ మూసివేయండి",
+        "open": "సైడ్‌బార్ తెరవండి"
+      }
+    },
+    "thread": {
+      "untitled": "పేరు లేని సంభాషణ",
+      "menu": {
+          "rename": "Rename",
+          "delete": "Delete"
+        },
+      "actions": {
+        "delete": {
+          "title": "తొలగింపును నిర్ధారించండి",
+          "description": "ఇది థ్రెడ్‌తో పాటు దాని సందేశాలను మరియు అంశాలను తొలగిస్తుంది. ఈ చర్యను రద్దు చేయలేరు",
+          "success": "చాట్ తొలగించబడింది",
+          "inProgress": "చాట్‌ని తొలగిస్తోంది"
+        },
+        "rename": {
+          "title": "థ్రెడ్ పేరు మార్చండి",
+          "description": "ఈ థ్రెడ్ కోసం కొత్త పేరును నమోదు చేయండి",
+          "form": {
+            "name": {
+              "label": "పేరు",
+              "placeholder": "కొత్త పేరును నమోదు చేయండి"
+            }
+          },
+          "success": "థ్రెడ్ పేరు మార్చబడింది!",
+          "inProgress": "థ్రెడ్ పేరు మారుస్తోంది"
+        }
+      }
+    }
+  },
+  "navigation": {
+    "header": {
+      "chat": "చాట్",
+      "readme": "చదవండి",
+      "theme": {
+        "light": "Light Theme",
+        "dark": "Dark Theme",
+        "system": "Follow System"
+      }
+    },
+    "newChat": {
+      "button": "కొత్త చాట్",
+      "dialog": {
+        "title": "కొత్త చాట్ సృష్టించండి",
+        "description": "ఇది మీ ప్రస్తుత చాట్ చరిత్రను తుడిచివేస్తుంది. మీరు కొనసాగించాలనుకుంటున్నారా?",
+        "tooltip": "కొత్త చాట్"
+      }
+    },
+    "user": {
+      "menu": {
+        "settings": "సెట్టింగ్‌లు",
+        "settingsKey": "S",
+        "apiKeys": "API కీలు",
+        "logout": "లాగ్ అవుట్"
+      }
+    }
+  },
+  "apiKeys": {
+    "title": "అవసరమైన API కీలు",
+    "description": "ఈ యాప్‌ని ఉపయోగించడానికి, కింది API కీలు అవసరం. కీలు మీ పరికరం యొక్క స్థానిక నిల్వలో నిల్వ చేయబడతాయి.",
+    "success": {
+      "saved": "విజయవంతంగా సేవ్ చేయబడింది"
+    }
+  },
+  "alerts": {
+    "info": "Info",
+    "note": "Note",
+    "tip": "Tip",
+    "important": "Important",
+    "warning": "Warning",
+    "caution": "Caution",
+    "debug": "Debug",
+    "example": "Example",
+    "success": "Success",
+    "help": "Help",
+    "idea": "Idea",
+    "pending": "Pending",
+    "security": "Security",
+    "beta": "Beta",
+    "best-practice": "Best Practice"
+  }
+}

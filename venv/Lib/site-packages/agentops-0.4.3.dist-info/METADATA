@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: agentops
+Version: 0.4.3
+Summary: Observability and DevTool Platform for AI Agents
+Project-URL: Homepage, https://github.com/AgentOps-AI/agentops
+Project-URL: Issues, https://github.com/AgentOps-AI/agentops/issues
+Author-email: Alex Reibman <areibman@gmail.com>, Shawn Qiu <siyangqiu@gmail.com>, Braelyn Boynton <bboynton97@gmail.com>, Howard Gil <howardbgil@gmail.com>, Constantin Teodorescu <teocns@gmail.com>, Pratyush Shukla <ps4534@nyu.edu>, Travis Dent <tcdent@gmail.com>, Dwij Patel <dwijpatel1704@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: <3.14,>=3.9
+Requires-Dist: opentelemetry-api==1.22.0; python_version < '3.10'
+Requires-Dist: opentelemetry-api>=1.27.0; python_version >= '3.10'
+Requires-Dist: opentelemetry-exporter-otlp-proto-http==1.22.0; python_version < '3.10'
+Requires-Dist: opentelemetry-exporter-otlp-proto-http>=1.27.0; python_version >= '3.10'
+Requires-Dist: opentelemetry-instrumentation>=0.48b0
+Requires-Dist: opentelemetry-sdk==1.22.0; python_version < '3.10'
+Requires-Dist: opentelemetry-sdk>=1.27.0; python_version >= '3.10'
+Requires-Dist: opentelemetry-semantic-conventions-ai>=0.4.2
+Requires-Dist: opentelemetry-semantic-conventions>=0.43b0
+Requires-Dist: ordered-set<5.0.0,>=4.0.0
+Requires-Dist: packaging<25.0,>=21.0
+Requires-Dist: psutil<6.1.0,>=5.9.8
+Requires-Dist: pyyaml<7.0,>=5.3
+Requires-Dist: requests<3.0.0,>=2.0.0
+Requires-Dist: termcolor<2.5.0,>=2.3.0
+Requires-Dist: wrapt<2.0.0,>=1.0.0

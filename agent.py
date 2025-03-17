@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 from typing import cast
 import chainlit as cl
-from agents import Agent, InputGuardrail, GuardrailFunctionOutput, Runner, AsyncOpenAI, OpenAIChatCompletionsModel
+from agents import Agent, Runner, AsyncOpenAI, OpenAIChatCompletionsModel
 from agents.run import RunConfig
 from pydantic import BaseModel
 from openai.types.responses import ResponseTextDeltaEvent

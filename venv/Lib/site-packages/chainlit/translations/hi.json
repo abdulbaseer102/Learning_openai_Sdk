@@ -1,0 +1,214 @@
+{
+  "common": {
+    "actions": {
+      "cancel": "रद्द करें",
+      "confirm": "पुष्टि करें",
+      "continue": "जारी रखें",
+      "goBack": "वापस जाएं",
+      "reset": "रीसेट करें",
+      "submit": "जमा करें"
+    },
+    "status": {
+      "loading": "लोड हो रहा है...",
+      "error": {
+        "default": "एक त्रुटि हुई",
+        "serverConnection": "सर्वर से संपर्क नहीं हो पा रहा"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "ऐप का उपयोग करने के लिए लॉगिन करें",
+      "form": {
+        "email": {
+          "label": "ईमेल पता",
+          "required": "ईमेल एक आवश्यक फ़ील्ड है"
+        },
+        "password": {
+          "label": "पासवर्ड",
+          "required": "पासवर्ड एक आवश्यक फ़ील्ड है"
+        },
+        "actions": {
+          "signin": "साइन इन करें"
+        },
+        "alternativeText": {
+          "or": "या"
+        }
+      },
+      "errors": {
+        "default": "साइन इन करने में असमर्थ",
+        "signin": "किसी दूसरे खाते से साइन इन करने का प्रयास करें",
+        "oauthSignin": "किसी दूसरे खाते से साइन इन करने का प्रयास करें",
+        "redirectUriMismatch": "रीडायरेक्ट URI oauth ऐप कॉन्फ़िगरेशन से मेल नहीं खा रहा",
+        "oauthCallback": "किसी दूसरे खाते से साइन इन करने का प्रयास करें",
+        "oauthCreateAccount": "किसी दूसरे खाते से साइन इन करने का प्रयास करें",
+        "emailCreateAccount": "किसी दूसरे खाते से साइन इन करने का प्रयास करें",
+        "callback": "किसी दूसरे खाते से साइन इन करने का प्रयास करें",
+        "oauthAccountNotLinked": "अपनी पहचान की पुष्टि करने के लिए, उसी खाते से साइन इन करें जिसका उपयोग आपने मूल रूप से किया था",
+        "emailSignin": "ईमेल नहीं भेजा जा सका",
+        "emailVerify": "कृपया अपना ईमेल सत्यापित करें, एक नया ईमेल भेजा गया है",
+        "credentialsSignin": "साइन इन विफल। आपके द्वारा प्रदान किए गए विवरण की जांच करें",
+        "sessionRequired": "इस पृष्ठ तक पहुंचने के लिए कृपया साइन इन करें"
+      }
+    },
+    "provider": {
+      "continue": "{{provider}} के साथ जारी रखें"
+    }
+  },
+  "chat": {
+    "input": {
+      "placeholder": "अपना संदेश यहां टाइप करें...",
+      "actions": {
+        "send": "संदेश भेजें",
+        "stop": "कार्य रोकें",
+        "attachFiles": "फ़ाइलें संलग्न करें"
+      }
+    },
+    "speech": {
+      "start": "रिकॉर्डिंग शुरू करें",
+      "stop": "रिकॉर्डिंग रोकें",
+      "connecting": "कनेक्ट हो रहा है"
+    },
+    "fileUpload": {
+      "dragDrop": "फ़ाइलों को यहां खींचें और छोड़ें",
+      "browse": "फ़ाइलें ब्राउज़ करें",
+      "sizeLimit": "सीमा:",
+      "errors": {
+        "failed": "अपलोड करने में विफल",
+        "cancelled": "का अपलोड रद्द किया गया"
+      }
+    },
+    "messages": {
+      "status": {
+        "using": "उपयोग कर रहे हैं",
+        "used": "उपयोग किया"
+      },
+      "actions": {
+        "copy": {
+          "button": "क्लिपबोर्ड पर कॉपी करें",
+          "success": "कॉपी किया गया!"
+        }
+      },
+      "feedback": {
+        "positive": "सहायक",
+        "negative": "सहायक नहीं",
+        "edit": "प्रतिक्रिया संपादित करें",
+        "dialog": {
+          "title": "टिप्पणी जोड़ें",
+          "submit": "प्रतिक्रिया जमा करें"
+        },
+        "status": {
+          "updating": "अपडेट हो रहा है",
+          "updated": "प्रतिक्रिया अपडेट की गई"
+        }
+      }
+    },
+    "history": {
+      "title": "पिछले इनपुट",
+      "empty": "कुछ भी नहीं है...",
+      "show": "इतिहास दिखाएं"
+    },
+    "settings": {
+      "title": "सेटिंग्स पैनल"
+    },
+    "watermark": "के साथ बनाया गया"
+  },
+  "threadHistory": {
+    "sidebar": {
+      "title": "पिछली चैट",
+      "filters": {
+        "search": "खोजें",
+        "placeholder": "Search conversations..."
+      },
+      "timeframes": {
+        "today": "आज",
+        "yesterday": "कल",
+        "previous7days": "पिछले 7 दिन",
+        "previous30days": "पिछले 30 दिन"
+      },
+      "empty": "कोई थ्रेड नहीं मिला",
+      "actions": {
+        "close": "साइडबार बंद करें",
+        "open": "साइडबार खोलें"
+      }
+    },
+    "thread": {
+      "untitled": "शीर्षकहीन वार्तालाप",
+      "menu": {
+          "rename": "Rename",
+          "delete": "Delete"
+        },
+      "actions": {
+        "delete": {
+          "title": "हटाने की पुष्टि करें",
+          "description": "यह थ्रेड और इसके संदेशों और तत्वों को हटा देगा। यह क्रिया वापस नहीं की जा सकती",
+          "success": "चैट हटा दी गई",
+          "inProgress": "चैट हटाई जा रही है"
+        },
+        "rename": {
+          "title": "थ्रेड का नाम बदलें",
+          "description": "इस थ्रेड के लिए एक नया नाम दर्ज करें",
+          "form": {
+            "name": {
+              "label": "नाम",
+              "placeholder": "नया नाम दर्ज करें"
+            }
+          },
+          "success": "थ्रेड का नाम बदल दिया गया!",
+          "inProgress": "थ्रेड का नाम बदला जा रहा है"
+        }
+      }
+    }
+  },
+  "navigation": {
+    "header": {
+      "chat": "चैट",
+      "readme": "रीडमी",
+      "theme": {
+        "light": "Light Theme",
+        "dark": "Dark Theme",
+        "system": "Follow System"
+      }
+    },
+    "newChat": {
+      "button": "नई चैट",
+      "dialog": {
+        "title": "नई चैट बनाएं",
+        "description": "यह आपका वर्तमान चैट इतिहास साफ़ कर देगा। क्या आप जारी रखना चाहते हैं?",
+        "tooltip": "नई चैट"
+      }
+    },
+    "user": {
+      "menu": {
+        "settings": "सेटिंग्स",
+        "settingsKey": "S",
+        "apiKeys": "API कुंजियां",
+        "logout": "लॉगआउट"
+      }
+    }
+  },
+  "apiKeys": {
+    "title": "आवश्यक API कुंजियां",
+    "description": "इस ऐप का उपयोग करने के लिए, निम्नलिखित API कुंजियां आवश्यक हैं। कुंजियां आपके डिवाइस के स्थानीय संग्रहण में संग्रहीत की जाती हैं।",
+    "success": {
+      "saved": "सफलतापूर्वक सहेजा गया"
+    }
+  },
+  "alerts": {
+    "info": "Info",
+    "note": "Note",
+    "tip": "Tip",
+    "important": "Important",
+    "warning": "Warning",
+    "caution": "Caution",
+    "debug": "Debug",
+    "example": "Example",
+    "success": "Success",
+    "help": "Help",
+    "idea": "Idea",
+    "pending": "Pending",
+    "security": "Security",
+    "beta": "Beta",
+    "best-practice": "Best Practice"
+  }
+}

@@ -1,0 +1,2 @@
+[opentelemetry_distro]
+uptrace_distro = uptrace.distro:UptraceDistro
