@@ -6,7 +6,6 @@ from pydantic import BaseModel
 from openai.types.responses import ResponseTextDeltaEvent
 from agents import (
     Agent, Runner, AsyncOpenAI, OpenAIChatCompletionsModel,
-    GuardrailFunctionOutput, InputGuardrailTripwireTriggered, RunContextWrapper, input_guardrail
 )
 
 # Load API key from .env
@@ -27,27 +26,7 @@ model = OpenAIChatCompletionsModel(
     openai_client=external_client
 )
 
-# Define Math Homework Guardrail
-class MathHomeworkOutput(BaseModel):
-    is_math_homework: bool
-    reasoning: str
 
-guardrail_agent = Agent(
-    name="Guardrail Check",
-    instructions="Check if the user is asking you to do their math homework.",
-    output_type=MathHomeworkOutput,
-    model=model
-)
-
-@input_guardrail
-async def math_guardrail(
-    ctx: RunContextWrapper[None], agent: Agent, input: str
-) -> GuardrailFunctionOutput:
-    result = await Runner.run(guardrail_agent, input, context=ctx.context)
-    return GuardrailFunctionOutput(
-        output_info=result.final_output,
-        tripwire_triggered=result.final_output.is_math_homework,
-    )
 
 # Define AI Agents
 
@@ -139,9 +118,6 @@ async def main(message: cl.Message):
         print(f"User: {message.content}")
         print(f"Assistant: {response_content}")
 
-    except InputGuardrailTripwireTriggered:
-        msg.content = "Sorry, I cannot help with math homework."
-        await msg.update()
     except Exception as e:
         msg.content = f"Error: {str(e)}"
         await msg.update()
