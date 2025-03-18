@@ -8,7 +8,6 @@ from agents import (
     Agent, Runner, AsyncOpenAI, OpenAIChatCompletionsModel,
 )
 
-# Load API key from .env
 load_dotenv()
 gemini_api_key = os.getenv("GEMINI_API_KEY")
 
