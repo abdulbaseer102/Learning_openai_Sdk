@@ -1,4 +1,3 @@
-from __future__ import annotations
 
 import os
 import chainlit as cl
@@ -66,7 +65,7 @@ async def math_guardrail(
 @cl.on_chat_start
 async def setup_chat_bot():
     await cl.Message("Welcome to the Guardrail bot").send()
-    
+
 
 # Main Chainlit function
 @cl.on_message
