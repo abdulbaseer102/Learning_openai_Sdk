@@ -37,7 +37,7 @@ history = Agent(
 async def start():
     cl.user_session.set("chat_history", [])
     cl.user_session.set("agent", history)
-    await cl.Message(content="Welcome! How can I assist you today?").send()
+    await cl.Message(content="Welcome! How can I assist you today i can only tell you about history?").send()
 
 @cl.on_message
 async def main(message: cl.Message):
