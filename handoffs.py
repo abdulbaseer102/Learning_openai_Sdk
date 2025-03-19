@@ -63,5 +63,3 @@ async def main(message: cl.Message):
     cl.user_session.set("chat_history", history)
     
     
-    print(f"User: {message.content}")
-    print(f"Assistant: {response_content}")
