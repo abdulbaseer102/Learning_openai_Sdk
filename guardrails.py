@@ -67,7 +67,7 @@ agent = Agent(
 @cl.on_chat_start
 async def start():
     cl.user_session.set("agent", agent)
-    await cl.Message(content="Welcome! How can I assist you today?").send()
+    await cl.Message(content="Welcome! How can I assist you today NOTE:DONT TELL ME ABOUT MATH?").send()
 
 @cl.on_message
 async def main(message: cl.Message):
