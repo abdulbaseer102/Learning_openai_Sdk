@@ -45,7 +45,7 @@ Defines the core **AI agent** structure, including:
 
 ### 7. `structured_output.py`
 
-- Give a answer in a structure.
+- Give a output in a structure.
 
 ## Setup Instructions
 
