@@ -43,6 +43,10 @@ Defines the core **AI agent** structure, including:
 
 - Provides additional **utility functions** to support AI agents.
 
+### 7. `structured_output.py`
+
+- Give a answer in a structure.
+
 ## Setup Instructions
 
 ### 1. Install Dependencies
