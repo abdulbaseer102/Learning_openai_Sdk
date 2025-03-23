@@ -33,4 +33,4 @@ def add_and_stringify(x:int, y:int) -> str:
 calculation = Calculator(operation=add_and_stringify)
 
 
-print(calculation(65,38))
+print(calculation(65,30))
