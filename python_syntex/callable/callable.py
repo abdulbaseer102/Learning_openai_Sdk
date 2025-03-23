@@ -30,7 +30,7 @@ class Calculator:
 def add_and_stringify(x:int, y:int) -> str:
     return str(x+y)
 
-calculate = Calculator(operation=add_and_stringify)
+calculation = Calculator(operation=add_and_stringify)
 
 
-print(calculate(65,38))
+print(calculation(65,38))

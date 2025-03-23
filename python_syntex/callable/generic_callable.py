@@ -15,8 +15,8 @@ def apply_transformer(value: T, transforms: Callable[[T], U]) -> U:
     return transforms(value)
 
 # Example 1: Transform an integer into a descriptive string.
-def int_to_str(n:int) -> str:
-    return f"the number is {n}"
+def int_to_str(num:int) -> str:
+    return f"the number is {num}"
 
 result1 = apply_transformer(34, int_to_str)
 print(result1)
