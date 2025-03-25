@@ -14,7 +14,7 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 
 
 stripe_agent_toolkit = StripeAgentToolkit(
-    secret_key="sk_test_51R6T9HHrHRMU52A3GCAeTfEJPd1aS5JSdHnSBCRcEU0cGPfjzJzlwnCCN31VCokVe5478c16hqAuyYEVR5Vpc5rL00VeuK9U6K",
+    secret_key="STRIPE_API_KEY",
     configuration={
         "actions": {
             "payment_links": {
