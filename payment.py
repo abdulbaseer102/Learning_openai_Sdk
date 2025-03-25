@@ -1,20 +1,16 @@
-import asyncio
 import os
-from dotenv import load_dotenv
 from typing import cast
 import chainlit as cl
-from agents import Agent, Runner, AsyncOpenAI, OpenAIChatCompletionsModel
+from agents import Agent, Runner, set_default_openai_key
 from stripe_agent_toolkit.openai.toolkit import StripeAgentToolkit
 
 
-load_dotenv()
 
-openai_api_key = os.getenv("OPENAI_API_KEY")
-
+set_default_openai_key("OPENAI_API_KEY")
 
 
 stripe_agent_toolkit = StripeAgentToolkit(
-    secret_key="STRIPE_API_KEY",
+    secret_key="STRIPE_SECRET_KEY",
     configuration={
         "actions": {
             "payment_links": {
