@@ -6,11 +6,9 @@ from stripe_agent_toolkit.openai.toolkit import StripeAgentToolkit
 
 
 
-set_default_openai_key("OPENAI_API_KEY")
 
 
 stripe_agent_toolkit = StripeAgentToolkit(
-    secret_key="STRIPE_SECRET_KEY",
     configuration={
         "actions": {
             "payment_links": {

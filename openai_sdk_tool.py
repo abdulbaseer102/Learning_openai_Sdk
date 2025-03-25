@@ -3,7 +3,6 @@ from typing import cast
 import chainlit as cl
 from agents import Agent, Runner, WebSearchTool, trace, set_default_openai_key
 
-set_default_openai_key("OPENAI_API_KEY")
 
 
 agent = Agent(
