@@ -5,9 +5,6 @@ from agents import Agent, Runner, set_default_openai_key
 from stripe_agent_toolkit.openai.toolkit import StripeAgentToolkit
 
 
-
-
-
 stripe_agent_toolkit = StripeAgentToolkit(
     configuration={
         "actions": {
